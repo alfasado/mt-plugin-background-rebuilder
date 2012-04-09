@@ -1,0 +1,13 @@
+name: BackgroundRebuilder
+id:   BackgroundRebuilder
+key:  backgroundrebuilder
+version: 0.1
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+description: <__trans phrase="It run in the background to rebuild when you save an entry.">
+l10n_class: BackgroundRebuilder::L10N
+callbacks:
+    cms_post_save.entry:
+        - handler: $backgroundrebuilder::BackgroundRebuilder::Plugin::_cb_cms_post_save_entry
+          priority: 10
+
