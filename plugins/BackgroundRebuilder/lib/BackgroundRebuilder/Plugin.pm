@@ -43,7 +43,7 @@ sub _cb_cms_post_save_entry {
     }
     my $mt_path = $app->base . $app->uri();
     my $return_path = $mt_path . $query_str;
-    my $redirect = 'Location: ' . $return_path . "\n\n";
+    my $redirect = 'Location: ' . $return_path . "\r\n\r\n";
     $app->print( $redirect );
     return 1;
 }
